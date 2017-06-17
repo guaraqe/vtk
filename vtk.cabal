@@ -1,0 +1,34 @@
+name: vtk
+version: 0.1.0
+cabal-version: >=1.10
+build-type: Simple
+license: GPL-3
+maintainer: guaraqe@openmailbox.org
+synopsis: Synopsis
+author: guaraqe
+
+library
+    exposed-modules:
+        Vtk
+
+        Vtk.Types
+        Vtk.Types.Common
+        Vtk.Types.StructuredPoints
+
+        Vtk.Parser
+        Vtk.Parser.Common
+        Vtk.Parser.StructuredPoints
+
+    build-depends:
+        base >=4.9 && <4.10,
+        attoparsec,
+        bytestring,
+        lens,
+        linear,
+        permute,
+        spool,
+        vector
+    default-language: Haskell2010
+    ghc-options: -Wall
+    hs-source-dirs: src
+
