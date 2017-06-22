@@ -41,7 +41,7 @@ spBuilder (StructuredPoints (V3 d1 d2 d3) (V3 o1 o2 o3) (V3 s1 s2 s3) vtkval) =
     , "ORIGIN ", show o1, " ", show o2, " ", show o3, "\n"
     , "SPACING ", show s1, " ", show s2, " ", show s3, "\n"
     , "POINT_DATA ", show (d1 * d2 * d3), "\n"
-    , "COLOR_SCALARS scalars 1"
+    , "COLOR_SCALARS scalars 1\n"
     ] <> valBuilder vtkval
 
 valBuilder :: VtkVal V.Vector -> BB.Builder
