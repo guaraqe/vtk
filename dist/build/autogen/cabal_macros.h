@@ -35,12 +35,12 @@
   (major1) == 4 && (major2) <  15 || \
   (major1) == 4 && (major2) == 15 && (minor) <= 1)
 
-/* package linear-1.20.5 */
-#define VERSION_linear "1.20.5"
+/* package linear-1.20.6 */
+#define VERSION_linear "1.20.6"
 #define MIN_VERSION_linear(major1,major2,minor) (\
   (major1) <  1 || \
   (major1) == 1 && (major2) <  20 || \
-  (major1) == 1 && (major2) == 20 && (minor) <= 5)
+  (major1) == 1 && (major2) == 20 && (minor) <= 6)
 
 /* package permute-1.0 */
 #define VERSION_permute "1.0"
@@ -126,7 +126,7 @@
   (major1) == 2 && (major2) <  27 || \
   (major1) == 2 && (major2) == 27 && (minor) <= 0)
 
-#define CURRENT_COMPONENT_ID "vtk-0.1.0-Hew8S6MahOm6SglzZcuPq7"
+#define CURRENT_COMPONENT_ID "vtk-0.1.0-BL6ofQOyJgvi17p79cNCT"
 
-#define CURRENT_PACKAGE_KEY "vtk-0.1.0-Hew8S6MahOm6SglzZcuPq7"
+#define CURRENT_PACKAGE_KEY "vtk-0.1.0-BL6ofQOyJgvi17p79cNCT"
 

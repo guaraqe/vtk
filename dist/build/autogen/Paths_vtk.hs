@@ -30,7 +30,7 @@ version = Version [0,1,0] []
 bindir, libdir, datadir, libexecdir, sysconfdir :: FilePath
 
 bindir     = "/home/juan/.cabal/bin"
-libdir     = "/home/juan/.cabal/lib/x86_64-linux-ghc-8.0.1/vtk-0.1.0-Hew8S6MahOm6SglzZcuPq7"
+libdir     = "/home/juan/.cabal/lib/x86_64-linux-ghc-8.0.1/vtk-0.1.0-BL6ofQOyJgvi17p79cNCT"
 datadir    = "/home/juan/.cabal/share/x86_64-linux-ghc-8.0.1/vtk-0.1.0"
 libexecdir = "/home/juan/.cabal/libexec"
 sysconfdir = "/home/juan/.cabal/etc"

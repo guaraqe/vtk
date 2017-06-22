@@ -19,6 +19,7 @@ module Vtk.Types
 
 import Vtk.Types.Common as Types
 import Vtk.Types.StructuredPoints as Types
+import Linear.V3 as Types
 
 import Control.Lens
 

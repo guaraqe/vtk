@@ -19,6 +19,8 @@ library
         Vtk.Parser.Common
         Vtk.Parser.StructuredPoints
 
+        Vtk.Writer
+
     build-depends:
         base >=4.9 && <4.10,
         attoparsec,

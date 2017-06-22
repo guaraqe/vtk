@@ -1,31 +1,29 @@
 module Vtk
-  ( vtkParser
+  ( withVtkFile
+  , parseVtk
+  , writeVtk
   , module Types
-  , vtkTest
   ) where
 
 import Vtk.Parser
+import Vtk.Writer
 import Vtk.Types as Types
 
-import Data.Word
 import Data.Attoparsec.ByteString
 import qualified Data.ByteString as BS
 import qualified Data.Vector.Storable as V
 
-import Control.Lens
+import System.IO
 
 --------------------------------------------------------------------------------
 
-vtkTest :: FilePath -> IO (V.Vector Word8)
-vtkTest path = do
-  file <- BS.readFile path
-  case eitherResult $ parse vtkParser file of
-     Left e -> fail e
-     Right r ->
-       case getWord r of
-         Nothing -> fail "Not word!"
-         Just v -> return v
+withVtkFile :: FilePath -> (Vtk V.Vector -> b) -> IO b
+withVtkFile path f =
+  withFile path ReadMode $ \handle -> do
+    file <- BS.hGetContents handle
+    case parseVtk file of
+      Nothing -> fail "Error parsing file"
+      Just a -> return (f a)
 
-getWord :: Vtk f -> Maybe (f Word8)
-getWord vtk =
-  vtk ^? vtk_data . vtkStructuredPoints . sp_points . vtkWord
+parseVtk :: BS.ByteString -> Maybe (Vtk V.Vector)
+parseVtk = maybeResult . parse vtkParser
